@@ -1,0 +1,6 @@
+usr/include/*/qt5/Qt3D*/*
+usr/lib/*/*.prl
+usr/lib/*/*.so
+usr/lib/*/cmake/*
+usr/lib/*/pkgconfig/*
+usr/lib/*/qt5/mkspecs/modules/*

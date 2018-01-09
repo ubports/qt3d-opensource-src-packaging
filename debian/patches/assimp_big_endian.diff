@@ -1,0 +1,15 @@
+Description: use Assimp namespace to fix build for big-endian architectures
+Origin: assimp upstream, https://github.com/assimp/assimp/commit/9afb760e06a22149
+Last-Update: 2017-07-16
+
+--- a/src/3rdparty/assimp/code/glTFAsset.inl
++++ b/src/3rdparty/assimp/code/glTFAsset.inl
+@@ -40,6 +40,8 @@
+ 
+ #include "StringUtils.h"
+ 
++using namespace Assimp;
++
+ namespace glTF {
+ 
+ namespace {

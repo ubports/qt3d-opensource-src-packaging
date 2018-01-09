@@ -1,0 +1,193 @@
+qt3d-opensource-src (5.9.1+ubports) xenial; urgency=medium
+
+  * Import to UBports
+
+ -- Dan Chapman <dan@ubports.com>  Tue, 09 Jan 2018 18:48:39 +0000
+
+qt3d-opensource-src (5.9.1+dfsg-3) unstable; urgency=medium
+
+  * Add missing dependencies to qt3d5-dev package (closes: #874786).
+  * Update symbols files from buildds’ logs.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Tue, 12 Sep 2017 15:04:41 +0300
+
+qt3d-opensource-src (5.9.1+dfsg-2) unstable; urgency=medium
+
+  * Release to unstable.
+  * Update symbols files with buildds' logs.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Wed, 16 Aug 2017 11:30:22 -0300
+
+qt3d-opensource-src (5.9.1+dfsg-1) experimental; urgency=medium
+
+  [ Simon Quigley ]
+  * New upstream release.
+  * Add myself to Uploaders.
+  * Add new upstream files to qt3d-gltfsceneio-plugin, making it contain
+    all gltf-related files.
+  * Qt 3D GL Assimp scene IO plugin was renamed upstream, adjust
+    accordingly.
+  * QTBUG-57543 was fixed, and we can ship the planets example now. Drop
+    do_not_build_planets_example.patch.
+  * Add the following packages from new upstream files:
+    - qml-module-qtquick-scene2d
+    - libqt53dquickscene2d5
+    - libqt53danimation5
+    - libqt53dquickanimation5
+    - qt3d-defaultgeometryloader-plugin
+    - qt3d-scene2d-plugin
+
+  [ Dmitry Shachnev ]
+  * Move qgltf executable to qt3d-gltfsceneio-plugin package.
+  * Migrate to automatic dbgsym packages.
+  * Update debian/copyright.
+  * Update symbols files from the current amd64 build log.
+  * Update the license for ConvertUTF code in debian/copyright according
+    to upstream relicensing. Override the Lintian error about it.
+  * Temporarily build with bundled Assimp. We cannot use the packaged
+    Assimp because Qt 3D needs some changes which were added after v3.3.1.
+  * Override false positive Lintian license-problem-json-evil error.
+  * Bump Qt build-dependencies to 5.9.1.
+  * Remove some non-free example assets from the tarball.
+    - Disable code which was using them (nonfree_resources.diff).
+  * Drop Build-Conflicts on qtmultimedia5-dev, not needed with this patch.
+  * Bump Standards-Version to 4.0.0, no changes needed.
+  * Backport a patch to fix Assimp build on big endian architectures
+    (assimp_big_endian.diff).
+  * Make qt3d5-examples depend on qml-module-qt3d (closes: #850470).
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Sun, 16 Jul 2017 21:09:59 +0300
+
+qt3d-opensource-src (5.7.1+dfsg-2) unstable; urgency=medium
+
+  * Make qt3d5-dev Recommend qt3d5-doc[-html] (Closes: #849980).
+    Thanks Ben Finney for the bug report.
+  * Make libqt3d5-dev depend upon all the libraries shipped by the source
+    package (Closes: #852524). Thanks Johannes Schauer for the bug report.
+  * Update symbols files with buildds' logs.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Wed, 25 Jan 2017 11:26:31 -0300
+
+qt3d-opensource-src (5.7.1+dfsg-1) unstable; urgency=medium
+
+  * Upstream final release.
+    - Bump Qt build dependencies.
+  * Add libgl1-mesa-dri as a test build dependency to avoid the message
+    "libEGL warning: DRI2: failed to open swrast".
+  * Add <!nocheck> to build dependencies used at test time.
+    - Bump debhelper dependency to >= 9.20141010~ to allow build profiles to
+      work.
+  * Make tests non-fatal. We currently only have one failing on some archs,
+    but it's a test issue as it doesn't fails if run alone (Closes: #847821).
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Tue, 20 Dec 2016 16:05:01 -0300
+
+qt3d-opensource-src (5.7.1~20161122+dfsg-2) unstable; urgency=medium
+
+  * Update symbols files with buildds' logs.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Sun, 11 Dec 2016 17:23:00 -0300
+
+qt3d-opensource-src (5.7.1~20161122+dfsg-1) unstable; urgency=medium
+
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * New upstream snapshot.
+    - Bump Qt build dependencies.
+  * Bump Standards-Version, no changes required.
+  * Update packaging:
+    - Libs with "Renderer" changed it's name to "Render". This changes
+      SONAME but there are still no rdeps in the archive.
+    - Documentation is now shipped under qt3d/.
+    - libqt3d5collision5 is not shipped anymore.
+    - Ship libqt3dquickinput5.
+    - gltfsceneparser now has an auxiliary binary.
+    - Regenerate symbols files for all libs. This makes handling both the
+      SONAME change and the symbols's nodes changes easier. We still have no
+      reverse dependencies to care for.
+  * Use secure URLs for the repos.
+  * Fix duplicated short description.
+  * Update debian/copyright.
+    - Do not ship examples/qt3d/planets-qml/images/*, they are clearly
+      non-free.
+  * Add extensions to xvfb-run needed by tests.
+  * Run only one test at a time, this seems to make qaspectengine's
+    setRootEntity work.
+  * Rename qt3d-gltfsceneparser-plugin to qt3d-gltfsceneio-plugin and
+    qt3d-assimpsceneparser-plugin to qt3d-assimpsceneio-plugin following
+    upstream's changes.
+  * Re do symbols files, this is the first API/ABI stable version that gets
+    into Debian.
+  * Do not build planets-qml example due to the lack of the required images,
+    as we need to remove them from the tarball for being undistributable.
+
+  [ Dmitry Shachnev ]
+  * Exclude audio-visualizer-qml example from the tarball because it contains
+    a non-free MP3 file (CC BY-ND 2.0).
+    - Add qtmultimedia5-dev to Build-Conflicts to make sure that example is
+      not built.
+    - Tell uscan to repack the tarball.
+  * Add some new symbols that appeared in 5.6.1.
+  * Bump Standards-Version to 3.9.8, no changes needed.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Fri, 09 Dec 2016 23:40:38 -0300
+
+qt3d-opensource-src (5.5.1-5) unstable; urgency=medium
+
+  * Remove libqt5xcb5 from build dependencies. It is now part of libqt5gui5
+    which is dragged in by qtbase5-dev (Closes: #817793).
+  * Add qml-module-qtquick-scene3d as a qt3d5-examples' dependency, needed
+    by qt3d's controls.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Thu, 10 Mar 2016 16:03:18 -0300
+
+qt3d-opensource-src (5.5.1-4) unstable; urgency=medium
+
+  * Add pkgconf as a build dependency. It is required to detect assimp files.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Tue, 03 Nov 2015 12:24:38 -0300
+
+qt3d-opensource-src (5.5.1-3) unstable; urgency=medium
+
+  * Add libassimp-dev as a build dependency in order to enable assimp support
+    (Closes: #803748). Thanks Александр Волков for the bug report.
+    - Create the new package qt3d-assimpsceneparser-plugin for it.
+  * Update symbols files with buildds' logs.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Mon, 02 Nov 2015 15:06:38 -0300
+
+qt3d-opensource-src (5.5.1-2) unstable; urgency=medium
+
+  [ Pino Toscano ]
+  * Make sure to remove private headers from all the libraries: extend the
+    rm pattern using globs.
+  * Remove cmake config files of plugins (like done in other qt5 modules).
+
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * Upload to unstable.
+  * Update symbols files with buildds' logs.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Mon, 26 Oct 2015 10:13:52 -0300
+
+qt3d-opensource-src (5.5.1-1) experimental; urgency=medium
+
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * New upstream release.
+    - Bump Qt dependencies.
+  * Update symbols files with buildds' and current logs.
+  * New components: q3dlogic and q3dcollision.
+    - Install documentation.
+    - Install libraries.
+  * Create qt3d-gltfsceneparser-plugin for the GL Transmission Format
+    scene parser plugin.
+
+  [ Dmitry Shachnev ]
+  * Add symbols files for the new library packages.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Wed, 21 Oct 2015 14:10:29 -0300
+
+qt3d-opensource-src (5.5.0-1) experimental; urgency=medium
+
+  [ Timo Jyrinki ]
+  * Initial release. (Closes: #697509)
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Fri, 04 Sep 2015 13:32:31 +0300

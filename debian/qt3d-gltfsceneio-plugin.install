@@ -1,0 +1,4 @@
+usr/lib/*/qt5/bin/qgltf
+usr/lib/*/qt5/plugins/geometryloaders/libgltfgeometryloader.so
+usr/lib/*/qt5/plugins/sceneparsers/libgltfsceneexport.so
+usr/lib/*/qt5/plugins/sceneparsers/libgltfsceneimport.so
