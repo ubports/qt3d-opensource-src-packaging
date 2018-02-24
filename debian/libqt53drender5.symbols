@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 5.9.1 alpha amd64 arm64 armel armhf hppa hurd-i386 i386 kfreebsd-amd64 kfreebsd-i386 m68k mips mips64el mipsel powerpc ppc64 ppc64el s390x sh4 sparc64 x32
+# SymbolsHelper-Confirmed: 5.9.2 amd64
 libQt53DRender.so.5 libqt53drender5 #MINVER#
  Qt_5.0@Qt_5.0 5.7.1~20161122
  Qt_5.1@Qt_5.1 5.7.1~20161122
@@ -12,7 +12,6 @@ libQt53DRender.so.5 libqt53drender5 #MINVER#
  Qt_5.9@Qt_5.9 5.9.0
  Qt_5@Qt_5 5.7.1~20161122
  Qt_5_PRIVATE_API@Qt_5_PRIVATE_API 5.7.1~20161122
- (optional=inline)_ZN10QByteArray7reserveEi@Qt_5 5.9.1
  _ZN10Qt3DRender10QAlphaTest11qt_metacallEN11QMetaObject4CallEiPPv@Qt_5 5.7.1~20161122
  _ZN10Qt3DRender10QAlphaTest11qt_metacastEPKc@Qt_5 5.7.1~20161122
  _ZN10Qt3DRender10QAlphaTest16setAlphaFunctionENS0_13AlphaFunctionE@Qt_5 5.7.1~20161122
@@ -1202,6 +1201,7 @@ libQt53DRender.so.5 libqt53drender5 #MINVER#
  _ZN10Qt3DRender19QSceneLoaderPrivate9setStatusENS_12QSceneLoader6StatusE@Qt_5 5.9.0
  _ZN10Qt3DRender19QSceneLoaderPrivateC1Ev@Qt_5 5.7.1~20161122
  _ZN10Qt3DRender19QSceneLoaderPrivateC2Ev@Qt_5 5.7.1~20161122
+ _ZN10Qt3DRender19QStencilTestPrivate15resendArgumentsEv@Qt_5 5.9.2
  _ZN10Qt3DRender20QLevelOfDetailSwitch11qt_metacallEN11QMetaObject4CallEiPPv@Qt_5 5.9.0
  _ZN10Qt3DRender20QLevelOfDetailSwitch11qt_metacastEPKc@Qt_5 5.9.0
  _ZN10Qt3DRender20QLevelOfDetailSwitch16sceneChangeEventERK14QSharedPointerIN8Qt3DCore12QSceneChangeEE@Qt_5 5.9.0
@@ -1413,6 +1413,7 @@ libQt53DRender.so.5 libqt53drender5 #MINVER#
  _ZN10Qt3DRender24QMultiSampleAntiAliasingD0Ev@Qt_5 5.7.1~20161122
  _ZN10Qt3DRender24QMultiSampleAntiAliasingD1Ev@Qt_5 5.7.1~20161122
  _ZN10Qt3DRender24QMultiSampleAntiAliasingD2Ev@Qt_5 5.7.1~20161122
+ _ZN10Qt3DRender24QStencilOperationPrivate15resendArgumentsEv@Qt_5 5.9.2
  _ZN10Qt3DRender25QGraphicsApiFilterPrivate3getEPNS_18QGraphicsApiFilterE@Qt_5 5.9.1
  _ZN10Qt3DRender26QRenderTargetOutputPrivateC1Ev@Qt_5 5.9.1
  _ZN10Qt3DRender26QRenderTargetOutputPrivateC2Ev@Qt_5 5.9.1
@@ -1623,7 +1624,7 @@ libQt53DRender.so.5 libqt53drender5 #MINVER#
  _ZN10Qt3DRender6Render6Sphere15expandToContainERKS1_@Qt_5 5.7.1~20161122
  _ZN10Qt3DRender6Render6Sphere20initializeFromPointsERK7QVectorI9QVector3DE@Qt_5 5.7.1~20161122
  _ZN10Qt3DRender6Render8Renderer10initializeEv@Qt_5 5.7.1~20161122
- _ZN10Qt3DRender6Render8Renderer11performDrawEPNS0_13RenderCommandE@Qt_5 5.7.1~20161122
+ _ZN10Qt3DRender6Render8Renderer11performDrawEPNS0_13RenderCommandE@Qt_5_PRIVATE_API 5.9.2
  _ZN10Qt3DRender6Render8Renderer11setSettingsEPNS0_14RenderSettingsE@Qt_5_PRIVATE_API 5.9.0
  _ZN10Qt3DRender6Render8Renderer12setSceneRootEPN8Qt3DCore19QBackendNodeFactoryEPNS0_6EntityE@Qt_5_PRIVATE_API 5.7.1~20161122
  _ZN10Qt3DRender6Render8Renderer12shouldRenderEv@Qt_5 5.7.1~20161122
@@ -1637,7 +1638,7 @@ libQt53DRender.so.5 libqt53drender5 #MINVER#
  _ZN10Qt3DRender6Render8Renderer15isReadyToSubmitEv@Qt_5 5.7.1~20161122
  _ZN10Qt3DRender6Render8Renderer15setNodeManagersEPNS0_12NodeManagersE@Qt_5 5.7.1~20161122
  _ZN10Qt3DRender6Render8Renderer16setOpenGLContextEP14QOpenGLContext@Qt_5 5.7.1~20161122
- _ZN10Qt3DRender6Render8Renderer17createOrUpdateVAOEPNS0_13RenderCommandEPN8Qt3DCore7QHandleINS0_23OpenGLVertexArrayObjectELj16EEEPPS6_@Qt_5 5.7.1~20161122
+ _ZN10Qt3DRender6Render8Renderer17createOrUpdateVAOEPNS0_13RenderCommandEPN8Qt3DCore7QHandleINS0_23OpenGLVertexArrayObjectELj16EEEPPS6_@Qt_5_PRIVATE_API 5.9.2
  _ZN10Qt3DRender6Render8Renderer17downloadGLBuffersEv@Qt_5 5.9.0
  _ZN10Qt3DRender6Render8Renderer17enqueueRenderViewEPNS0_10RenderViewEi@Qt_5_PRIVATE_API 5.7.1~20161122
  _ZN10Qt3DRender6Render8Renderer17setSurfaceExposedEb@Qt_5 5.7.1~20161122
@@ -2190,6 +2191,7 @@ libQt53DRender.so.5 libqt53drender5 #MINVER#
  _ZNK10Qt3DRender19QRenderTargetOutput5layerEv@Qt_5 5.7.1~20161122
  _ZNK10Qt3DRender19QRenderTargetOutput7textureEv@Qt_5 5.7.1~20161122
  _ZNK10Qt3DRender19QRenderTargetOutput8mipLevelEv@Qt_5 5.7.1~20161122
+ _ZNK10Qt3DRender19QStencilTestPrivate8fillDataERNS_16QStencilTestDataE@Qt_5 5.9.2
  _ZNK10Qt3DRender20QLevelOfDetailSwitch10metaObjectEv@Qt_5 5.9.0
  _ZNK10Qt3DRender20QPaintedTextureImage10metaObjectEv@Qt_5 5.9.0
  _ZNK10Qt3DRender20QPaintedTextureImage13dataGeneratorEv@Qt_5 5.9.0
@@ -2226,6 +2228,7 @@ libQt53DRender.so.5 libqt53drender5 #MINVER#
  _ZNK10Qt3DRender23QBlendEquationArguments24createNodeCreationChangeEv@Qt_5 5.7.1~20161122
  _ZNK10Qt3DRender23QBlendEquationArguments9sourceRgbEv@Qt_5 5.7.1~20161122
  _ZNK10Qt3DRender24QMultiSampleAntiAliasing10metaObjectEv@Qt_5 5.7.1~20161122
+ _ZNK10Qt3DRender24QStencilOperationPrivate8fillDataERNS_21QStencilOperationDataE@Qt_5 5.9.2
  _ZNK10Qt3DRender26QStencilOperationArguments10metaObjectEv@Qt_5 5.7.1~20161122
  _ZNK10Qt3DRender26QStencilOperationArguments21allTestsPassOperationEv@Qt_5 5.7.1~20161122
  _ZNK10Qt3DRender26QStencilOperationArguments25depthTestFailureOperationEv@Qt_5 5.7.1~20161122

@@ -1,29 +1,30 @@
 Source: qt3d-opensource-src
 Section: libs
 Priority: optional
-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+XSBC-Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Uploaders: Timo Jyrinki <timo@debian.org>,
            Sune Vuorela <debian@pusling.com>,
            Pino Toscano <pino@debian.org>,
            Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>,
            Dmitry Shachnev <mitya57@debian.org>,
            Simon Quigley <tsimonq2@ubuntu.com>
-Build-Depends: debhelper (>= 9.20160114~),
+Build-Depends: debhelper (>= 9),
                dpkg-dev (>= 1.17.14),
                libgl1-mesa-dri <!nocheck>,
-               libqt5opengl5-dev (>= 5.9.1+dfsg~),
+               libqt5opengl5-dev (>= 5.9.2+dfsg~),
                pkg-kde-tools,
                pkgconf,
-               qtbase5-private-dev (>= 5.9.1+dfsg~),
-               qtdeclarative5-private-dev (>= 5.9.1~),
+               qtbase5-private-dev (>= 5.9.2+dfsg-3~),
+               qtdeclarative5-private-dev (>= 5.9.2~),
                xauth <!nocheck>,
                xvfb <!nocheck>,
                zlib1g-dev
-Build-Depends-Indep: libqt5sql5-sqlite (>= 5.9.1+dfsg~),
+Build-Depends-Indep: libqt5sql5-sqlite (>= 5.9.2+dfsg~),
                      qtbase5-doc-html,
                      qtdeclarative5-doc-html,
-                     qttools5-dev-tools (>= 5.9.1~)
-Standards-Version: 4.0.0
+                     qttools5-dev-tools
+Standards-Version: 4.1.1
 Homepage: http://qt-project.org/
 Vcs-Git: https://anonscm.debian.org/git/pkg-kde/qt/qt3d.git
 Vcs-Browser: https://anonscm.debian.org/cgit/pkg-kde/qt/qt3d.git
@@ -182,20 +183,37 @@ Description: Qt 3D Quick animation module
  .
  This package contains the Qt Quick Animation module.
 
+Package: qt3d5-dev-tools
+Architecture: any
+Multi-Arch: foreign
+Section: devel
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Breaks: qt3d-assimpsceneio-plugin (<< 5.9.0+dfsg-1~),
+        qt3d-gltfsceneio-plugin (<< 5.9.2+dfsg-1~)
+Replaces: qt3d-assimpsceneio-plugin (<< 5.9.0+dfsg-1~),
+          qt3d-gltfsceneio-plugin (<< 5.9.2+dfsg-1~)
+Description: Qt 3D development tools
+ Qt 3D provides functionality for near-realtime simulation systems with
+ support for 2D and 3D rendering in both Qt C++ and Qt Quick applications.
+ .
+ This package contains development programs to use with Qt 3D.
+ .
+ At the moment there is only one tool here, qgltf, which can be used to
+ import a variety of 3D model formats and export it into fast-to-load,
+ optimized glTF assets embedded into Qt resource files.
+
 Package: qt3d-gltfsceneio-plugin
 Architecture: any
 Multi-Arch: same
 Depends: libqt53dcore5 (= ${binary:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
-Breaks: qt3d-assimpsceneio-plugin (<< 5.9.0+dfsg-1~)
-Replaces: qt3d-assimpsceneio-plugin (<< 5.9.0+dfsg-1~)
 Description: Qt 3D GL Transmission Format scene IO plugin
  Qt is a cross-platform C++ application framework. Qt's primary feature
  is its rich set of widgets that provide standard GUI functionality.
  .
- This package contains Qt 3D's GLTF geometry loader, scene import and
- export plugins, and a helper qgltf executable.
+ This package contains Qt 3D's GLTF geometry loader, and scene import and
+ export plugins.
 
 Package: qt3d-assimpsceneimport-plugin
 Architecture: any

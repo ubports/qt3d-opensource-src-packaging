@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 5.9.1 alpha arm64 armel armhf mips mips64el mipsel sh4
+# SymbolsHelper-Confirmed: 5.9.2 amd64
 libQt53DCore.so.5 libqt53dcore5 #MINVER#
  Qt_5.0@Qt_5.0 5.7.1~20161122
  Qt_5.1@Qt_5.1 5.7.1~20161122
@@ -148,7 +148,6 @@ libQt53DCore.so.5 libqt53dcore5 #MINVER#
  _ZN8Qt3DCore13QThreadPooler12taskFinishedEPNS_17RunnableInterfaceE@Qt_5 5.7.1~20161122
  _ZN8Qt3DCore13QThreadPooler14mapDependablesER7QVectorIPNS_17RunnableInterfaceEE@Qt_5 5.7.1~20161122
  _ZN8Qt3DCore13QThreadPooler16staticMetaObjectE@Qt_5 5.7.1~20161122
- _ZN8Qt3DCore13QThreadPooler20setDependencyHandlerEPNS_17DependencyHandlerE@Qt_5 5.7.1~20161122
  _ZN8Qt3DCore13QThreadPooler6futureEv@Qt_5 5.7.1~20161122
  _ZN8Qt3DCore13QThreadPooler7acquireEi@Qt_5 5.7.1~20161122
  _ZN8Qt3DCore13QThreadPooler7releaseEv@Qt_5 5.7.1~20161122
