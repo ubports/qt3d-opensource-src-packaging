@@ -3,28 +3,9 @@ Author: Dmitry Shachnev <mitya57@debian.org>
 Forwarded: not-needed
 Last-Update: 2017-07-16
 
---- a/examples/qt3d/exampleresources/obj.qrc
-+++ b/examples/qt3d/exampleresources/obj.qrc
-@@ -1,8 +1,5 @@
- <RCC>
-     <qresource prefix="/">
--        <file>assets/textures/pattern_09/specular.webp</file>
--        <file>assets/textures/pattern_09/normal.webp</file>
--        <file>assets/textures/pattern_09/diffuse.webp</file>
-         <file>assets/obj/trefoil.obj</file>
-         <file>assets/obj/toyplane.obj</file>
-         <file>assets/obj/ball.obj</file>
 --- a/examples/qt3d/qt3d.pro
 +++ b/examples/qt3d/qt3d.pro
-@@ -6,15 +6,12 @@
-     multiviewport \
-     wireframe \
-     shadow-map-qml \
--    materials \
-     wave \
--    materials-cpp \
-     scene3d \
-     controls \
+@@ -12,7 +12,6 @@ SUBDIRS += \
      anaglyph-rendering \
      planets-qml \
      instanced-arrays-qml \
@@ -32,9 +13,9 @@ Last-Update: 2017-07-16
      compute-particles \
      3d-text \
      qardboard \
-@@ -22,8 +19,6 @@
-     simplecustommaterial \
-     scene2d
+@@ -21,8 +20,6 @@ SUBDIRS += \
+     scene2d \
+     pbr-materials
  
 -qtHaveModule(multimedia): SUBDIRS += audio-visualizer-qml
 -

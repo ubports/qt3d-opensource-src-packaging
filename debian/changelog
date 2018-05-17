@@ -1,8 +1,26 @@
-qt3d-opensource-src (5.9.3+dfsg-0ubports2) xenial; urgency=medium
+qt3d-opensource-src (5.9.5+dfsg-0ubports2) xenial; urgency=medium
 
-  * Import to UBPorts
+  * Update symbols from build logs.
 
- -- Dan Chapman <dan@ubports.com>  Sat, 24 Feb 2018 07:34:05 +0000
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Sat, 14 Apr 2018 14:44:14 -0500
+
+qt3d-opensource-src (5.9.5+dfsg-0ubuntu1) bionic; urgency=medium
+
+  * New upstream release.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Sat, 14 Apr 2018 13:52:08 -0500
+
+qt3d-opensource-src (5.9.4+dfsg-0ubuntu2) bionic; urgency=medium
+
+  * Update symbols from build logs.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Sun, 25 Feb 2018 02:24:33 -0600
+
+qt3d-opensource-src (5.9.4+dfsg-0ubuntu1) bionic; urgency=medium
+
+  * New upstream release.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Sun, 25 Feb 2018 00:36:28 -0600
 
 qt3d-opensource-src (5.9.3+dfsg-0ubuntu1) bionic; urgency=medium
 

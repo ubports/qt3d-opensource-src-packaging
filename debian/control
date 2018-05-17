@@ -12,18 +12,18 @@ Uploaders: Timo Jyrinki <timo@debian.org>,
 Build-Depends: debhelper (>= 9),
                dpkg-dev (>= 1.17.14),
                libgl1-mesa-dri <!nocheck>,
-               libqt5opengl5-dev (>= 5.9.2+dfsg~),
+               libqt5opengl5-dev (>= 5.9.5+dfsg~),
                pkg-kde-tools,
                pkgconf,
-               qtbase5-private-dev (>= 5.9.2+dfsg-3~),
-               qtdeclarative5-private-dev (>= 5.9.2~),
+               qtbase5-private-dev (>= 5.9.5+dfsg~),
+               qtdeclarative5-private-dev (>= 5.9.5~),
                xauth <!nocheck>,
                xvfb <!nocheck>,
                zlib1g-dev
-Build-Depends-Indep: libqt5sql5-sqlite (>= 5.9.2+dfsg~),
+Build-Depends-Indep: libqt5sql5-sqlite (>= 5.9.5+dfsg~),
                      qtbase5-doc-html,
                      qtdeclarative5-doc-html,
-                     qttools5-dev-tools
+                     qttools5-dev-tools (>= 5.9.5~)
 Standards-Version: 4.1.1
 Homepage: http://qt-project.org/
 Vcs-Git: https://anonscm.debian.org/git/pkg-kde/qt/qt3d.git

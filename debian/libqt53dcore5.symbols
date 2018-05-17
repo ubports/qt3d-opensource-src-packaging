@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 5.9.2 amd64
+# SymbolsHelper-Confirmed: 5.9.5 amd64 arm64 armhf i386 ppc64el s390x
 libQt53DCore.so.5 libqt53dcore5 #MINVER#
  Qt_5.0@Qt_5.0 5.7.1~20161122
  Qt_5.1@Qt_5.1 5.7.1~20161122
@@ -333,7 +333,9 @@ libQt53DCore.so.5 libqt53dcore5 #MINVER#
  _ZN8Qt3DCore20QObservableInterfaceD0Ev@Qt_5 5.7.1~20161122
  _ZN8Qt3DCore20QObservableInterfaceD1Ev@Qt_5 5.7.1~20161122
  _ZN8Qt3DCore20QObservableInterfaceD2Ev@Qt_5 5.7.1~20161122
+ _ZN8Qt3DCore21QComponentAddedChangeC1EPKNS_10QComponentEPKNS_7QEntityE@Qt_5 5.9.5
  _ZN8Qt3DCore21QComponentAddedChangeC1EPKNS_7QEntityEPKNS_10QComponentE@Qt_5 5.7.1~20161122
+ _ZN8Qt3DCore21QComponentAddedChangeC2EPKNS_10QComponentEPKNS_7QEntityE@Qt_5 5.9.5
  _ZN8Qt3DCore21QComponentAddedChangeC2EPKNS_7QEntityEPKNS_10QComponentE@Qt_5 5.7.1~20161122
  _ZN8Qt3DCore21QComponentAddedChangeD0Ev@Qt_5 5.7.1~20161122
  _ZN8Qt3DCore21QComponentAddedChangeD1Ev@Qt_5 5.7.1~20161122
@@ -365,7 +367,9 @@ libQt53DCore.so.5 libqt53dcore5 #MINVER#
  _ZN8Qt3DCore22QPropertyUpdatedChangeD0Ev@Qt_5 5.7.1~20161122
  _ZN8Qt3DCore22QPropertyUpdatedChangeD1Ev@Qt_5 5.7.1~20161122
  _ZN8Qt3DCore22QPropertyUpdatedChangeD2Ev@Qt_5 5.7.1~20161122
+ _ZN8Qt3DCore23QComponentRemovedChangeC1EPKNS_10QComponentEPKNS_7QEntityE@Qt_5 5.9.5
  _ZN8Qt3DCore23QComponentRemovedChangeC1EPKNS_7QEntityEPKNS_10QComponentE@Qt_5 5.7.1~20161122
+ _ZN8Qt3DCore23QComponentRemovedChangeC2EPKNS_10QComponentEPKNS_7QEntityE@Qt_5 5.9.5
  _ZN8Qt3DCore23QComponentRemovedChangeC2EPKNS_7QEntityEPKNS_10QComponentE@Qt_5 5.7.1~20161122
  _ZN8Qt3DCore23QComponentRemovedChangeD0Ev@Qt_5 5.7.1~20161122
  _ZN8Qt3DCore23QComponentRemovedChangeD1Ev@Qt_5 5.7.1~20161122

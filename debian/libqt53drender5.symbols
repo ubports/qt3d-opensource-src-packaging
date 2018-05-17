@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 5.9.2 amd64
+# SymbolsHelper-Confirmed: 5.9.5 amd64 arm64 armhf i386 ppc64el s390x
 libQt53DRender.so.5 libqt53drender5 #MINVER#
  Qt_5.0@Qt_5.0 5.7.1~20161122
  Qt_5.1@Qt_5.1 5.7.1~20161122
@@ -613,6 +613,7 @@ libQt53DRender.so.5 libqt53drender5 #MINVER#
  _ZN10Qt3DRender14QBufferCaptureD2Ev@Qt_5 5.9.0
  _ZN10Qt3DRender14QBufferPrivateC1Ev@Qt_5 5.7.1~20161122
  _ZN10Qt3DRender14QBufferPrivateC2Ev@Qt_5 5.7.1~20161122
+ _ZN10Qt3DRender14QCameraPrivate28updateViewMatrixAndTransformEb@Qt_5 5.9.5
  _ZN10Qt3DRender14QCameraPrivateC1Ev@Qt_5 5.9.1
  _ZN10Qt3DRender14QCameraPrivateC2Ev@Qt_5 5.9.1
  _ZN10Qt3DRender14QEffectPrivateC1Ev@Qt_5 5.9.1
@@ -1243,7 +1244,7 @@ libQt53DRender.so.5 libqt53drender5 #MINVER#
  _ZN10Qt3DRender20QRenderAspectPrivate16loadRenderPluginERK7QString@Qt_5 5.9.0
  _ZN10Qt3DRender20QRenderAspectPrivate16loadSceneParsersEv@Qt_5 5.7.1~20161122
  _ZN10Qt3DRender20QRenderAspectPrivate16renderInitializeEP14QOpenGLContext@Qt_5 5.7.1~20161122
- _ZN10Qt3DRender20QRenderAspectPrivate17renderSynchronousEv@Qt_5 5.7.1~20161122
+ _ZN10Qt3DRender20QRenderAspectPrivate17renderSynchronousEb@Qt_5 5.9.5
  _ZN10Qt3DRender20QRenderAspectPrivate19registerBackendTypeERK11QMetaObjectRK14QSharedPointerIN8Qt3DCore18QBackendNodeMapperEE@Qt_5 5.9.0
  _ZN10Qt3DRender20QRenderAspectPrivate20registerBackendTypesEv@Qt_5 5.7.1~20161122
  _ZN10Qt3DRender20QRenderAspectPrivate22unregisterBackendTypesEv@Qt_5 5.7.1~20161122
@@ -1495,6 +1496,17 @@ libQt53DRender.so.5 libqt53drender5 #MINVER#
  _ZN10Qt3DRender6QLayerD0Ev@Qt_5 5.7.1~20161122
  _ZN10Qt3DRender6QLayerD1Ev@Qt_5 5.7.1~20161122
  _ZN10Qt3DRender6QLayerD2Ev@Qt_5 5.7.1~20161122
+ _ZN10Qt3DRender6Render10CameraLens10viewMatrixERK10QMatrix4x4@Qt_5 5.9.5
+ _ZN10Qt3DRender6Render10CameraLens11setExposureEf@Qt_5 5.9.5
+ _ZN10Qt3DRender6Render10CameraLens13setProjectionERK10QMatrix4x4@Qt_5 5.9.5
+ _ZN10Qt3DRender6Render10CameraLens16sceneChangeEventERK14QSharedPointerIN8Qt3DCore12QSceneChangeEE@Qt_5 5.9.5
+ _ZN10Qt3DRender6Render10CameraLens18initializeFromPeerERK14QSharedPointerIN8Qt3DCore22QNodeCreatedChangeBaseEE@Qt_5 5.9.5
+ _ZN10Qt3DRender6Render10CameraLens7cleanupEv@Qt_5 5.9.5
+ _ZN10Qt3DRender6Render10CameraLensC1Ev@Qt_5 5.9.5
+ _ZN10Qt3DRender6Render10CameraLensC2Ev@Qt_5 5.9.5
+ _ZN10Qt3DRender6Render10CameraLensD0Ev@Qt_5 5.9.5
+ _ZN10Qt3DRender6Render10CameraLensD1Ev@Qt_5 5.9.5
+ _ZN10Qt3DRender6Render10CameraLensD2Ev@Qt_5 5.9.5
  _ZN10Qt3DRender6Render11BackendNode11setRendererEPNS0_16AbstractRendererE@Qt_5 5.9.0
  _ZN10Qt3DRender6Render11BackendNode16resourceAccessorEv@Qt_5 5.9.0
  _ZN10Qt3DRender6Render11BackendNode9markDirtyE6QFlagsINS0_16AbstractRenderer20BackendNodeDirtyFlagEE@Qt_5 5.9.0
@@ -1503,7 +1515,7 @@ libQt53DRender.so.5 libqt53drender5 #MINVER#
  _ZN10Qt3DRender6Render11BackendNodeD0Ev@Qt_5 5.9.0
  _ZN10Qt3DRender6Render11BackendNodeD1Ev@Qt_5 5.9.0
  _ZN10Qt3DRender6Render11BackendNodeD2Ev@Qt_5 5.9.0
- _ZN10Qt3DRender6Render11ShaderCache25getShaderProgramAndAddRefEjN8Qt3DCore7QNodeIdE@Qt_5 5.7.1~20161122
+ _ZN10Qt3DRender6Render11ShaderCache25getShaderProgramAndAddRefEjN8Qt3DCore7QNodeIdEPb@Qt_5 5.9.5
  _ZN10Qt3DRender6Render11ShaderCache5clearEv@Qt_5 5.7.1~20161122
  _ZN10Qt3DRender6Render11ShaderCache5purgeEv@Qt_5 5.7.1~20161122
  _ZN10Qt3DRender6Render11ShaderCache6insertEjN8Qt3DCore7QNodeIdEP20QOpenGLShaderProgram@Qt_5 5.7.1~20161122
@@ -1638,7 +1650,7 @@ libQt53DRender.so.5 libqt53drender5 #MINVER#
  _ZN10Qt3DRender6Render8Renderer15isReadyToSubmitEv@Qt_5 5.7.1~20161122
  _ZN10Qt3DRender6Render8Renderer15setNodeManagersEPNS0_12NodeManagersE@Qt_5 5.7.1~20161122
  _ZN10Qt3DRender6Render8Renderer16setOpenGLContextEP14QOpenGLContext@Qt_5 5.7.1~20161122
- _ZN10Qt3DRender6Render8Renderer17createOrUpdateVAOEPNS0_13RenderCommandEPN8Qt3DCore7QHandleINS0_23OpenGLVertexArrayObjectELj16EEEPPS6_@Qt_5_PRIVATE_API 5.9.2
+ _ZN10Qt3DRender6Render8Renderer17createOrUpdateVAOEPNS0_13RenderCommandEPN8Qt3DCore7QHandleINS0_23OpenGLVertexArrayObjectEEEPPS6_@Qt_5_PRIVATE_API 5.9.4
  _ZN10Qt3DRender6Render8Renderer17downloadGLBuffersEv@Qt_5 5.9.0
  _ZN10Qt3DRender6Render8Renderer17enqueueRenderViewEPNS0_10RenderViewEi@Qt_5_PRIVATE_API 5.7.1~20161122
  _ZN10Qt3DRender6Render8Renderer17setSurfaceExposedEb@Qt_5 5.7.1~20161122
@@ -1663,7 +1675,7 @@ libQt53DRender.so.5 libqt53drender5 #MINVER#
  _ZN10Qt3DRender6Render8Renderer6formatEv@Qt_5 5.9.0
  _ZN10Qt3DRender6Render8Renderer6renderEv@Qt_5 5.7.1~20161122
  _ZN10Qt3DRender6Render8Renderer7setTimeEx@Qt_5 5.7.1~20161122
- _ZN10Qt3DRender6Render8Renderer8doRenderEv@Qt_5 5.7.1~20161122
+ _ZN10Qt3DRender6Render8Renderer8doRenderEb@Qt_5 5.9.5
  _ZN10Qt3DRender6Render8Renderer8shutdownEv@Qt_5 5.7.1~20161122
  _ZN10Qt3DRender6Render8Renderer9dirtyBitsEv@Qt_5 5.7.1~20161122
  _ZN10Qt3DRender6Render8Renderer9markDirtyE6QFlagsINS0_16AbstractRenderer20BackendNodeDirtyFlagEEPNS0_11BackendNodeE@Qt_5 5.9.0
@@ -2521,6 +2533,7 @@ libQt53DRender.so.5 libqt53drender5 #MINVER#
  _ZTIN10Qt3DRender33QStencilOperationArgumentsPrivateE@Qt_5 5.9.1
  _ZTIN10Qt3DRender5QMeshE@Qt_5 5.7.1~20161122
  _ZTIN10Qt3DRender6QLayerE@Qt_5 5.7.1~20161122
+ _ZTIN10Qt3DRender6Render10CameraLensE@Qt_5 5.9.5
  _ZTIN10Qt3DRender6Render11BackendNodeE@Qt_5 5.9.0
  _ZTIN10Qt3DRender6Render15FrameCleanupJobE@Qt_5 5.7.1~20161122
  _ZTIN10Qt3DRender6Render16AbstractRendererE@Qt_5 5.7.1~20161122
@@ -2703,6 +2716,7 @@ libQt53DRender.so.5 libqt53drender5 #MINVER#
  _ZTSN10Qt3DRender33QStencilOperationArgumentsPrivateE@Qt_5 5.9.1
  _ZTSN10Qt3DRender5QMeshE@Qt_5 5.7.1~20161122
  _ZTSN10Qt3DRender6QLayerE@Qt_5 5.7.1~20161122
+ _ZTSN10Qt3DRender6Render10CameraLensE@Qt_5 5.9.5
  _ZTSN10Qt3DRender6Render11BackendNodeE@Qt_5 5.9.0
  _ZTSN10Qt3DRender6Render15FrameCleanupJobE@Qt_5 5.7.1~20161122
  _ZTSN10Qt3DRender6Render16AbstractRendererE@Qt_5 5.7.1~20161122
@@ -2885,6 +2899,7 @@ libQt53DRender.so.5 libqt53drender5 #MINVER#
  _ZTVN10Qt3DRender33QStencilOperationArgumentsPrivateE@Qt_5 5.9.1
  _ZTVN10Qt3DRender5QMeshE@Qt_5 5.7.1~20161122
  _ZTVN10Qt3DRender6QLayerE@Qt_5 5.7.1~20161122
+ _ZTVN10Qt3DRender6Render10CameraLensE@Qt_5 5.9.5
  _ZTVN10Qt3DRender6Render11BackendNodeE@Qt_5 5.9.0
  _ZTVN10Qt3DRender6Render15FrameCleanupJobE@Qt_5 5.7.1~20161122
  _ZTVN10Qt3DRender6Render16ResourceAccessorE@Qt_5 5.9.0
